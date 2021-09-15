@@ -1,6 +1,8 @@
-import React from "react";
-import textData from "../data/data.json";
-import { Border } from "../../styled.js";
+import React, { useState } from "react";
+//import "../../App.css";
+import Buttons from "./Buttons";
+import { BackgroundImage } from "../../styled";
+//import Buttons from "./Buttonsxx"
 /*
 podemos usar la metoda map para mostrar los datos del fechiro json
 pero he usado los props 
@@ -8,18 +10,13 @@ pero he usado los props
         return <p>{ele}</p>  
       })}
 */
-const Scene = ({ param1, param2, param3, param4 }) => (
-  <div className="posts">
-    <div>
-      <Border>{(param1 = textData[0])}</Border>
-      <Border>{(param2 = textData[1])}</Border>
-      <Border>{(param3 = textData[2])}</Border>
-      <Border>{(param4 = textData[3])}</Border>
-    </div>
-  </div>
-);
 
+const Scene = () => {
 
+  return (
+    <BackgroundImage>
+      <Buttons/>
+    </BackgroundImage>
+  );
+};
 export default Scene;
-
-
