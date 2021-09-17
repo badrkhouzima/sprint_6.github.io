@@ -1,21 +1,14 @@
 import React, { useState } from "react";
 //import "../../App.css";
-import Buttons from "./Buttons";
+
+import Scenes from "./Scenes";
 import { BackgroundImage } from "../../styled";
-//import Buttons from "./Buttonsxx"
-/*
-podemos usar la metoda map para mostrar los datos del fechiro json
-pero he usado los props 
-{textData.map((ele) => {
-        return <p>{ele}</p>  
-      })}
-*/
 
 const Scene = () => {
-
+  const [counter, setCounter] = useState(-1)
   return (
-    <BackgroundImage>
-      <Buttons/>
+    <BackgroundImage image={counter}>
+      <Scenes counter={counter} setCounter={setCounter} />
     </BackgroundImage>
   );
 };

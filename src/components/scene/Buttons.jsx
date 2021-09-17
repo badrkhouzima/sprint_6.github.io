@@ -1,31 +1,38 @@
-import React, {useState} from 'react';
-import arr from "../data/data";
-import {Button, Paragraph} from "../../styled"
-
-const Buttons = () => {
- const [counter, setCounter] = useState(-1);
-
- const backHandler = () => {
-   setCounter(counter - 1);
- };
- const forwardHandler = () => {
-   setCounter(counter + 1);
-
-   if (counter == 0) {
-   } else if (counter == 1) {
-   } else if (counter == 2) {
-   } else if (counter == 3) {
-   }
- };
- 
-   return (
-     <>
-       <Button onClick={backHandler}>Backward</Button>
-       <Button onClick={forwardHandler}>Forward</Button>
-       {arr.map((ele, index) => (
-         <Paragraph color={index === counter}> {ele} </Paragraph>
-       ))}
-     </>
-   );
-}
+import React from "react";
+import { Button } from "../../styled";
+const Buttons = (props) => {
+  const backHandler = () => {
+    props.setCounter(props.counter - 1);
+    if (props.counter === -2) {
+      props.setCounter((preCoun) => (preCoun = 3));
+    } else if (props.counter === 0) {
+    } else if (props.counter === 1) {
+    } else if (props.counter === 2) {
+    } else if (props.counter === 3) {
+    } else if (props.counter === 4) {
+      props.setCounter(-1);
+    }
+  };
+  const forwardHandler = () => {
+    props.setCounter(props.counter + 1);
+    if (props.counter === 0) {
+    } else if (props.counter === 1) {
+    } else if (props.counter === 2) {
+    } else if (props.counter === 3) {
+    } else if (props.counter === 4) {
+      props.setCounter(-1);
+    }
+  };
+  return (
+    <>
+      <Button onClick={backHandler}>Backward</Button>
+      <Button
+        onclick={() => props.setCounter(props.counter)}
+        onClick={forwardHandler}
+      >
+        Forward
+      </Button>
+    </>
+  );
+};
 export default Buttons;
