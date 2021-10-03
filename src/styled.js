@@ -19,7 +19,11 @@ export const Paragraph = styled.p`
   margin: 40px;
   padding: 8px;
   border: 1px solid rgb(255, 255, 255);
+  font-family: Arial, Helvetica, sans-serif;
   color: #fff;
+  font-size: 1.2em;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
   font-weight: bold;
   width: auto;
   display: flex;
@@ -29,7 +33,9 @@ export const Paragraph = styled.p`
   height: 40px;
   border-radius: 35px;
   text-align: center;
-  background-color: ${(props) => (props.color ? "red" : props.color)};
+  background-color: ${(props) => (props.color ? "#ff0000" : props.color)};
+  /* backdrop-filter: ${(props) =>
+    props.color ? "blur(5px)" : props.color}; */
 `;
 
 export const BackGround = styled.div`

@@ -24,12 +24,7 @@ const Buttons = (props) => {
   return (
     <>
       <Button onClick={backHandler}>Backward</Button>
-      <Button
-        
-        onClick={forwardHandler}
-      >
-        Forward
-      </Button>
+      <Button onClick={forwardHandler}>Forward</Button>
     </>
   );
 };
