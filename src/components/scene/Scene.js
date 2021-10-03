@@ -2,14 +2,14 @@ import React, { useState } from "react";
 //import "../../App.css";
 
 import Scenes from "./Scenes";
-import { BackgroundImage } from "../../styled";
+import { BackGround } from "../../styled";
 
 const Scene = () => {
-  const [counter, setCounter] = useState(-1)
+  const [counter, setCounter] = useState(0)
   return (
-    <BackgroundImage image={counter}>
+    <BackGround image={counter}>
       <Scenes counter={counter} setCounter={setCounter} />
-    </BackgroundImage>
+    </BackGround>
   );
 };
 export default Scene;

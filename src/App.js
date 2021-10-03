@@ -1,13 +1,13 @@
-import React  from "react";
+import React,{Fragment}  from "react";
 /*import "./App.css";*/
 
 import ButtonPage from "./components/scene/ButtonPage";
 const App = () => {
 
   return (
-    <React.Fragment>
+    <Fragment>
       <ButtonPage />
-    </React.Fragment>
+    </Fragment>
   );
 };
 

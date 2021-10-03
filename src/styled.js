@@ -1,8 +1,19 @@
 import styled from "styled-components";
 import dataImg from "./components/data/data";
 
-export const TitleInit = styled.h1`
+export const Title = styled.h1`
   text-align: center;
+`;
+export const Intropage = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  background-color: #56e9f4;
+  padding: auto;
+  margin: auto;
 `;
 export const Paragraph = styled.p`
   margin: 40px;
@@ -21,27 +32,18 @@ export const Paragraph = styled.p`
   background-color: ${(props) => (props.color ? "red" : props.color)};
 `;
 
-export const BackgroundImage = styled.div`
-  border: 1px solid #000;
-  width: 100vw;
-  height: 100vh;
-  padding-top: 100px;
-  background-image: url(${(props) => props.image === 0 ? dataImg[0].img : props.image === 1 ? dataImg[1].img : props.image === 2 ? dataImg[2].img : dataImg[3].img});
-  background-repeat: "no-repeat";
-  justify-content: center;
-  flex-direction: column;
-  align-items: center; ;
-`;
-
 export const BackGround = styled.div`
-  width: 100vw;
+  padding-top: 100px;
+  background-image: url(${(props) =>
+    props.image === 0
+      ? dataImg[0].img
+      : props.image === 1
+      ? dataImg[1].img
+      : props.image === 2
+      ? dataImg[2].img
+      : dataImg[3].img});
   height: 100vh;
-  display: flex;
-  
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background-color: #b2c0f5;
+  background-size: cover;
 `;
 
 const getColorRandom = () => {

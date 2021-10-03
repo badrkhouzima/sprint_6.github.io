@@ -1,13 +1,16 @@
-import React, {Fragment} from 'react'
-import { TitleInit } from "../../styled";
+import React from 'react'
+import { Button1, Title, Intropage } from "../../styled";
 
-const Intro = () => {
+
+const Intro = (props) => {
   return (
-    <Fragment>
-      <TitleInit>
+    <Intropage>
+      <Title>
         We are glad that you choose to navigate through our story
-      </TitleInit>
-    </Fragment>
+        <Button1 onClick={() => props.setShowPage(false)}
+        >Hey..! From Here, You Just Need To Pinch</Button1>
+      </Title>
+    </Intropage>
   );
 };
 
