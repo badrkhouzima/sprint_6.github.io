@@ -33,26 +33,20 @@ export const Paragraph = styled.p`
   height: 40px;
   border-radius: 35px;
   text-align: center;
-  background-color: ${(props) => (props.color ? "#ff0000" : props.color)};
+  background-color: ${(props) => (props.color ? "#dda6a6" : props.color)};
   /* backdrop-filter: ${(props) =>
     props.color ? "blur(5px)" : props.color}; */
+ 
 `;
 
 export const BackGround = styled.div`
-//i used --url to solve an error
-    --url: url(${(props) =>
-      props.image === 0
-        ? dataImg[0].img
-        : props.image === 1
-        ? dataImg[1].img
-        : props.image === 2
-        ? dataImg[2].img
-        : dataImg[3].img});
  
-  height: 100vh;
   background-size: cover;
   padding-top: 100px;
-  background-image: var(--url);
+  padding-bottom: 130px;
+  background-image: url(${(props) => dataImg[props.image].img});
+  background-size: 100vh 100vw;
+ 
 `;
 
 const getColorRandom = () => {
